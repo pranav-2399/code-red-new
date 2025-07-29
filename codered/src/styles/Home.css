@@ -1,0 +1,131 @@
+.home-container {
+    width: 100vw;
+    min-height: 100vh; /* Ensure container takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding around the whole container */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+
+    background-image: url('/backgrounds/map-bg.jpg'); /* adjust path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-bottom: 40px; /* More space below the main heading */
+    text-align: center;
+    color: var(--hacker-accent); /* Use hacker accent color for heading */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Subtle glow from theme */
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 30px; /* Space between columns */
+    width: 100%; /* Take full width of parent */
+    max-width: 1200px; /* Max width for larger screens */
+    height: 80vh; /* Maintain height */
+    align-items: start; /* Align items to the start of the grid cell */
+}
+
+.home-features {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally within this column */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 20px; /* Add padding inside the features box */
+    border: 1px solid var(--hacker-border); /* Use hacker theme border */
+    border-radius: 12px; /* Slightly rounded corners */
+    background-color: rgba(45, 45, 45, 0.5); /* Semi-transparent background */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2); /* Subtle green glow */
+    height: auto;
+    box-sizing: border-box;
+}
+
+.home-features-heading {
+    margin-bottom: 30px; /* Space below the features heading */
+    color: var(--hacker-text); /* Use neon green for features heading */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.4); /* Subtle glow */
+}
+
+.features-inputs {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 20px; /* Space between inputs */
+    width: 100%; /* Inputs take full width of their container */
+    padding: 0 10px; /* Small horizontal padding for inputs container */
+}
+
+.inputBox {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--hacker-border); /* Green border */
+    border-radius: 8px; /* Rounded corners for inputs */
+    background-color: var(--hacker-button-bg); /* Darker background for inputs */
+    color: var(--hacker-text); /* Neon green text */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.25s, box-shadow 0.25s;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.inputBox::placeholder {
+    color: rgba(0, 255, 0, 0.5); /* Lighter neon green for placeholder */
+}
+
+.inputBox:focus {
+    border-color: var(--hacker-button-hover-border);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .home-features {
+        margin-top: 30px; /* Add space when stacked below map */
+        height: auto;
+    }
+}
+
+.autocomplete {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.autocomplete input {
+  width: 100%;
+  padding: 8px;
+}
+
+.suggestions {
+  position: absolute;
+  background-color: var(--hacker-bg);
+  max-height: 150px;
+  overflow-y: scroll;
+  z-index: 10;
+  border-radius: 10%;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+.ai-paragraph {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 800px;
+}

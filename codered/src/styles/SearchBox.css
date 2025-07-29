@@ -1,0 +1,22 @@
+.inputBox {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--hacker-border); /* Green border */
+    border-radius: 8px; /* Rounded corners for inputs */
+    background-color: var(--hacker-button-bg); /* Darker background for inputs */
+    color: var(--hacker-text); /* Neon green text */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.25s, box-shadow 0.25s;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.inputBox::placeholder {
+    color: rgba(0, 255, 0, 0.5); /* Lighter neon green for placeholder */
+}
+
+.inputBox:focus {
+    border-color: var(--hacker-button-hover-border); /* Brighter green on focus */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6); /* More prominent glow on focus */
+}
