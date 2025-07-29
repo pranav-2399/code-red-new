@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.env
+.venv/
+venv/
+.env.*
+.DS_Store
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# FastAPI / Logs / Temp
+*.log
+saved_routes/
+output_routes.json
+*.sqlite3
+*.db
+
+# Secrets
+.env
+*.key
+*.pem
+
+# Node / React
+node_modules/
+dist/
+build/
+npm-debug.log
+yarn-error.log
+
+# Vite
+.vite/
+*.tsbuildinfo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Bytecode
+*.pyc
+*.pyo
